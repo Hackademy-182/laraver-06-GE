@@ -15,7 +15,8 @@
             <div class="col-md-4">
                 <div class="card p-3">
                     <h5 class="mb-1">{{ $m->brand }} {{ $m->model }}</h5>
-                    <div class="text-muted">{{ $m->engine_cc }} cc • {{ $m->production_year }}</div>
+                    <div class="text-muted">{{ strtoupper($m->condition) }} • {{ $m->engine_cc }} cc</div>
+                    <div class="fw-bold mt-2">€ {{ $m->price_eur }} • {{ $m->mileage_km }} km</div>
                     <a class="btn btn-outline-primary mt-3" href="/motorbikes/{{ $m->id }}">Dettaglio</a>
                 </div>
             </div>
