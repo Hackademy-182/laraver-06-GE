@@ -2,9 +2,14 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\MotorbikeController;
+use App\Models\Car;
+use App\Models\Motorbike;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn () => view('home'));
+Route::get('/', fn () => view('home', [
+    'latestCars' => Car::latest()->take(5)->get(),
+    'latestBikes' => Motorbike::latest()->take(5)->get(),
+]));
 Route::get('/cars', [CarController::class, 'index']);
 Route::get('/cars/create', [CarController::class, 'create']);
 Route::post('/cars', [CarController::class, 'store']);

@@ -1,6 +1,9 @@
 <x-layout title="Auto & Moto">
-    <h1>Marketplace Auto & Moto</h1>
-    <p>Annunci di auto e moto nuove e usate.</p>
-    <a class="btn btn-primary me-2" href="/cars">Esplora Auto</a>
-    <a class="btn btn-outline-primary" href="/motorbikes">Esplora Moto</a>
+
+
+    <div id="home" class="mb-4">@include('home.hero')</div>
+    <div id="compra" class="mb-5">@include('home.compra')</div>
+    <div id="noleggio" class="mb-5">@include('home.noleggio')</div>
+    <div id="search" class="mb-5">@include('home.search')</div>
+
 </x-layout>

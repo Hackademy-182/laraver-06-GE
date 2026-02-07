@@ -1,5 +1,8 @@
 <x-layout title="Motorbike Detail">
     <h1>{{ $motorbike->brand }} {{ $motorbike->model }}</h1>
+    <img class="w-100 rounded-4 mb-3" style="max-height:320px;object-fit:cover"
+        src="https://picsum.photos/1200/500?random={{ $motorbike->id + 1000 }}" alt="">
+
     <p class="text-muted">{{ $motorbike->production_year }} • {{ strtoupper($motorbike->condition) }}</p>
     <p class="fw-bold">€ {{ $motorbike->price_eur }} • {{ $motorbike->mileage_km }} km</p>
 

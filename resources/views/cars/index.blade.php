@@ -3,12 +3,11 @@
 
     <div class="row g-3">
         @foreach ($cars as $car)
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5 class="mb-1">{{ $car->brand }} {{ $car->model }}</h5>
-                    <div class="text-muted">{{ strtoupper($car->condition) }}</div>
-                    <div class="fw-bold mt-2">€ {{ $car->price_eur }} • {{ $car->mileage_km }} km</div>
-                    <a class="btn btn-outline-primary mt-3" href="/cars/{{ $car->id }}">Dettaglio</a>
+            <div class="position-relative mb-2">
+                <img class="w-100 rounded-4" style="height:160px;object-fit:cover;filter:brightness(.78)"
+                    src="https://picsum.photos/600/400?random={{ $car->id }}" alt="">
+                <div class="position-absolute bottom-0 start-0 m-2 px-2 py-1 text-white overlay-box">
+                    € {{ $car->price_eur }} • {{ $car->mileage_km }} km
                 </div>
             </div>
         @endforeach
