@@ -14,10 +14,9 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
             <ul class="navbar-nav mt-3 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#compra">Compra</a></li>
-                <li class="nav-item"><a class="nav-link" href="#noleggio">Noleggio</a></li>
-                <li class="fw-bold mb-2">Search</li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Compra</a></li>
+
                 <spam class="input-group">
                     <input class="form-control" placeholder="Cerca modello, marca... (coming soon)">
                     <button class="btn btn-outline-secondary" type="button">Cerca</button>
