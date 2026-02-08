@@ -3,6 +3,11 @@
 
     <div class="row g-3">
         @foreach ($cars as $car)
+            <div class="text-muted">{{ $car->production_year }} • {{ $car->engine_cc }} cc • {{ $car->horsepower }} hp
+            </div>
+            <div class="text-muted text-truncate">{{ $car->body_type }} • {{ $car->doors }} doors</div>
+            <div class="small text-muted text-truncate">{{ $car->description }}</div>
+
             <div class="position-relative mb-2">
                 <img class="w-100 rounded-4" style="height:160px;object-fit:cover;filter:brightness(.78)"
                     src="https://picsum.photos/600/400?random={{ $car->id }}" alt="">

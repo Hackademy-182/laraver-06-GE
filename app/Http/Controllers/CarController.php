@@ -21,7 +21,10 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
-        Car::create($request->only(['brand', 'model', 'condition', 'mileage_km', 'price_eur']));
+        Car::create($request->only([
+            'brand', 'model', 'engine_cc', 'horsepower', 'production_year', 'description', 'body_type', 'doors',
+            'condition', 'mileage_km', 'price_eur',
+        ]));
 
         return redirect('/cars');
     }
